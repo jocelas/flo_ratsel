@@ -1,5 +1,5 @@
 
-
+import sys
 
 alphabet = list('abcdefghijklmnopqrstuvwxyz')
 Alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
@@ -12,7 +12,7 @@ decoy = 'asdfgb cmtz srux vjkjokeay rec DQwEPXY EGUWCNVF znyix'
 deocy_key = list('asdfgbcmtzsruxvjkjokeayrec')
 lower_decoy = decoy.lower()
 
-first_text = "Guten Tag, das hier ist ein decoy text. Er hat keinen weiteren Sinn"
+first_text = "Guten Tag, das hier ist ein decoy text. Er hat keinen weiteren Sinn "
 total_text = first_text + decoy
 
 
@@ -33,5 +33,5 @@ def shift_decoy(n, decoy_in, key_list, alphabet_list):
     return ''.join(decoy_out)
 
 if __name__ == '__main__':
-    count = count_letter(total_text)
-    print(f"Number of letters in text: {count}")
+    with open('data/text_jonas.txt', 'w') as f:
+        f.write(total_text)

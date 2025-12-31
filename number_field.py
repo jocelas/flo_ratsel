@@ -28,5 +28,4 @@ def numbers_to_text(array_in, alphabet):
     return text_array
 
 if __name__ == '__main__':
-    print(np.sum(numbers, axis=0))
-    print(np.sum(numbers, axis=1))
+    np.savetxt("data/grid_jonas.dat", numbers, fmt='%d')
